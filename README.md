@@ -3,7 +3,8 @@ dotfiles
 
 Vim and Bash configs
 
-Setup
+
+#Setup
 
 ```
 rm -rf ~/.vim*
