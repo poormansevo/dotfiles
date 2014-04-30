@@ -1,0 +1,54 @@
+# MacPorts Installer addition on 2012-02-07_at_15:05:50: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/jetty/bin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+export EDITOR=vi
+export NODE_ENV=development
+
+ulimit -n 768
+
+function redisstart() {
+  sudo launchctl start io.redis.redis-server
+}
+function redisstop() {
+  sudo launchctl stop io.redis.redis-server
+}
+function ll() {
+  ls -al $1
+}
+function desk() {
+  cd ~/Desktop
+}
+function sql() {
+  cd ~/Desktop/eb5/database
+}
+function app() {
+  cd ~/Desktop/eb5-app/app
+}
+export -f app
+function jet() {
+  cd /usr/local/jetty
+}
+
+function tom() {
+  cd /usr/local/tomcat
+}
+
+function dev() {
+  ssh srichardson@ebdev
+}
+
+function test() {
+  ssh srichardson@ebtest
+}
+
+function web1() {
+  ssh srichardson@ebweb1
+}
+
+function web2() {
+  ssh srichardson@ebweb2
+}
+
+export CLICOLOR=1
+#export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
