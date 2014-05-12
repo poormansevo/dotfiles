@@ -7,6 +7,7 @@ Vim and Bash configs
 ###Setup
 
 ```
+mv dotfiles ~/.dotfiles
 rm -rf ~/.vim*
 mkdir -p ~/.dotfiles/vim
 ln -s ~/.dotfiles/vim ~/.vim
