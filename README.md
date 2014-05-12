@@ -12,6 +12,7 @@ mkdir -p ~/.dotfiles/vim
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 
+mkdir -p ~/.dotfiles/bash
 ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
 ln -s ~/.dotfiles/bash/bash_profile ~/.bash_profile
 ```
