@@ -1,4 +1,7 @@
 # MacPorts Installer addition on 2012-02-07_at_15:05:50: adding an appropriate PATH variable for use with MacPorts.
+set -o vi
+bind -m vi-insert "\C-l":clear-screen
+
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/jetty/bin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 export EDITOR=vi
