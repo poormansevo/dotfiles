@@ -1,57 +1,38 @@
-# MacPorts Installer addition on 2012-02-07_at_15:05:50: adding an appropriate PATH variable for use with MacPorts.
+HISTFILESIZE=10000000
+
+export EDITOR=vi
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/jetty/bin:/usr/local/mongodb/bin:/opt/Qt/5.3/clang_64/bin:$PATH
+
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/jetty/bin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-export EDITOR=vi
-export NODE_ENV=development
+alias ..='cd ..'
+alias .-='cd -'
+alias c='clear'
+alias dl='cd ~/Downloads'
+alias dt='cd ~/Desktop'
+alias h='history'
+alias j='jobs'
+alias l='ls -alrt'
+alias lr='ls -lR'
+alias ld='find . -type d'
+alias scp='rsync -v -h --stats'
+alias up='uptime'
 
-ulimit -n 768
-
-function redisstart() {
-  sudo launchctl start io.redis.redis-server
-}
-function redisstop() {
-  sudo launchctl stop io.redis.redis-server
-}
-function ll() {
-  ls -al $1
-}
-function desk() {
-  cd ~/Desktop
-}
-function sql() {
-  cd ~/Desktop/eb5/database
-}
-function app() {
-  cd ~/Desktop/eb5-app/app
-}
-export -f app
-function jet() {
-  cd /usr/local/jetty
-}
-
-function tom() {
-  cd /usr/local/tomcat
-}
-
-function dev() {
-  ssh srichardson@ebdev
+function s() {
+  ssh root@sdath$1
 }
 
 function test() {
-  ssh srichardson@ebtest
+  ssh srichardson@test
 }
 
 function web1() {
-  ssh srichardson@ebweb1
+  ssh srichardson@web1
 }
 
 function web2() {
-  ssh srichardson@ebweb2
+  ssh srichardson@web2
 }
-
-export CLICOLOR=1
-#export LSCOLORS=ExFxCxDxBxegedabagacad
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
