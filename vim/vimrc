@@ -1,17 +1,21 @@
 " Editor defaults
+set nocompatible
+"set cursorline " highlight current line
 set ff=unix
-set number
+set number " number lines
 set nobackup
 set ai
 set modeline
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab " insert 4 spaces for <tab>
 set backspace=indent,eol,start
-set nocompatible
 set laststatus=2
 set t_Co=256
 set encoding=utf-8
-set showmatch
+set showmatch " highlight matching [{()}]
+set nohlsearch
 set incsearch
+set ignorecase
+
 set hidden
 set history=1000
 set title
@@ -20,17 +24,14 @@ set backupdir=/tmp
 set directory=/tmp
 set foldmethod=manual
 set vb
-set colorcolumn=80
-
-" Power Line font
-"let g:Powerline_symbols = 'fancy'
 
 " Syntax
 syntax on
-set background=dark
-color wombat256mod
+color solarized 
+colorscheme molokai
+"colorscheme solarized 
 filetype plugin on
-filetype indent off
+filetype indent on 
 
 " Testing out unicode support
 if has("multi_byte")
